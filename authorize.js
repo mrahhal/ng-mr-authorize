@@ -115,14 +115,16 @@
 				}
 
 				return function (state) {
+					if (angular.isString(state)) {
+						state = $state.get(state);
+					}
 					if (!state) throw new Error('state undefined.');
 
 					var states;
 					// Optimize for states without parents.
 					if (state.name.lastIndexOf('.') < 0) {
 						states = [state];
-					}
-					else {
+					} else {
 						// Get all states
 						states = withAncestors(state);
 					}
