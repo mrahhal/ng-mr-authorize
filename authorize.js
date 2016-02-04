@@ -116,7 +116,15 @@
 					}
 				}
 
+				function validateUsage() {
+					if (!angular.isFunction(self.authed) || !angular.isFunction(self.policies)) {
+						throw new Error('Make sure you set authorizeProvider.authed and authorizeProvider.policies.');
+					}
+				}
+
 				return function (state) {
+					validateUsage();
+
 					if (angular.isString(state)) {
 						state = $state.get(state);
 					}
