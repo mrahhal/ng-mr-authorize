@@ -1,0 +1,25 @@
+{
+  "globals"   : {
+    "describe"   : false,
+    "it"         : false,
+    "before"     : false,
+    "beforeEach" : false,
+    "after"      : false,
+    "afterEach"  : false,
+	"angular"    : false,
+	"inject"     : false,
+	"expect"     : false,
+	"module"     : false
+  },
+  "camelcase": true,
+  "eqeqeq": true,
+  "freeze": true,
+  "indent": 4,
+  "latedef": true,
+  "laxcomma": true,
+  "node": true,
+  "trailing": true,
+  "strict": false,
+  "unused": "vars",
+  "undef": true
+}
