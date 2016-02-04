@@ -7,7 +7,7 @@
   ],
   "keywords": ["angular", "ui-router", "authorize", "authorization"],
   "license": "MIT",
-  "homepage": "",
+  "homepage": "https://github.com/mrahhal/ng-mr-authorize",
   "ignore": [
     "**/.*",
     "node_modules",
