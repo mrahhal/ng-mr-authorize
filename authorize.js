@@ -6,17 +6,17 @@
 		.provider('authorize', function () {
 			var self = this;
 
-			this._authed = function (authed) {
-				return !!this.authed();
+			this._authed = function ($injector) {
+				return !!$injector.invoke(this.authed);
 			};
 
-			this._policies = function (policies) {
-				return this.policies();
+			this._policies = function ($injector) {
+				return $injector.invoke(this.policies);
 			};
 
-			this.$get = function ($state) {
+			this.$get = function ($injector, $state) {
 				function check(policy) {
-					var cp = self._policies();
+					var cp = self._policies($injector);
 					if (cp) {
 						for (var i = 0; i < cp.length; i++) {
 							if (cp[i].toUpperCase() === policy.toUpperCase()) {
@@ -32,7 +32,7 @@
 						return true;
 					}
 
-					if (!self._authed()) {
+					if (!self._authed($injector)) {
 						// Unauthorized
 						return 401;
 					}
