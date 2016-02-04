@@ -51,54 +51,54 @@ describe('authorize', function () {
 	});
 
 	it('should pass with no protection', function () {
-		expect(authorize('home')).toBe(true);
+		authorize('home').should.be.true();
 	});
 
 	it('should pass with protection and authed', function () {
 		authed = true;
-		expect(authorize('protected1')).toBe(true);
+		authorize('protected1').should.be.true();
 	});
 
 	it('should pass with policy protection and policy', function () {
 		authed = true;
 		policies = ['p1'];
-		expect(authorize('protected2')).toBe(true);
+		authorize('protected2').should.be.true();
 	});
 
 	it('should pass with base policy protection and policy', function () {
 		authed = true;
 		policies = ['p1'];
-		expect(authorize('protected2.sub')).toBe(true);
+		authorize('protected2.sub').should.be.true();
 	});
 
 	it('should pass with base protection and authed', function () {
 		authed = true;
-		expect(authorize('protected1.sub')).toBe(true);
+		authorize('protected1.sub').should.be.true();
 	});
 
 	it('should pass with protection and override', function () {
-		expect(authorize('protected1.override')).toBe(true);
+		authorize('protected1.override').should.be.true();
 	});
 
 	it('should 401 with protection', function () {
-		expect(authorize('protected1')).toBe(401);
+		authorize('protected1').should.be.eql(401);
 	});
 
 	it('should 401 with base protection', function () {
-		expect(authorize('protected1.sub')).toBe(401);
+		authorize('protected1.sub').should.be.eql(401);
 	});
 
 	it('should 401 with policy protection and not authed', function () {
-		expect(authorize('protected2')).toBe(401);
+		authorize('protected2').should.be.eql(401);
 	});
 
 	it('should 403 with policy protection and authed', function () {
 		authed = true;
-		expect(authorize('protected2')).toBe(403);
+		authorize('protected2').should.be.eql(403);
 	});
 
 	it('should 403 with base policy protection and authed', function () {
 		authed = true;
-		expect(authorize('protected2.sub')).toBe(403);
+		authorize('protected2.sub').should.be.eql(403);
 	});
 });

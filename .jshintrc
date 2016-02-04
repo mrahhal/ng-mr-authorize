@@ -9,6 +9,7 @@
 	"angular"    : false,
 	"inject"     : false,
 	"expect"     : false,
+	"should"     : false,
 	"module"     : false
   },
   "camelcase": true,

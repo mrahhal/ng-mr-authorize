@@ -2,7 +2,7 @@ module.exports = function(config) {
   config.set({
 
     // frameworks to use
-    frameworks: ['jasmine'],
+    frameworks: ['mocha', 'should'],
 
     // list of files / patterns to load in the browser
     files: [
