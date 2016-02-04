@@ -12,8 +12,11 @@
     "**/.*",
     "node_modules",
     "bower_components",
-    "test",
-    "tests"
+		"package.json"
+		".bowerrc",
+		"gulpfile.js",
+    "karma.conf.js",
+		"test",
   ],
   "dependencies": {
     "angular-ui-router": "^0.2.17"
