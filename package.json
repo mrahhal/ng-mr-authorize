@@ -20,7 +20,6 @@
     "karma-coverage": "~0.5",
     "karma-firefox-launcher": "~0.1",
     "karma-jasmine": "~0.3",
-    "karma-ng-html2js-preprocessor": "^0.1.0",
-    "karma-phantomjs-launcher": "~0.2.1"
+    "karma-ng-html2js-preprocessor": "^0.1.0"
   }
 }
