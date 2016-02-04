@@ -5,6 +5,7 @@ node_js:
 before_script:
 - export DISPLAY=:99.0
 - sh -e /etc/init.d/xvfb start
+- npm install -qg bower gulp-cli
 - npm install
 - bower install
 script: gulp build
