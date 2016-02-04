@@ -1,4 +1,7 @@
 # ng-mr-authorize
+[![Travis](https://img.shields.io/travis/mrahhal/ng-mr-authorize/master.svg)](https://travis-ci.org/mrahhal/ng-mr-authorize)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+
 Authorization service for ui-router in angular.
 
 ## Overview
