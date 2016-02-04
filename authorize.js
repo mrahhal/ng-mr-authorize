@@ -28,7 +28,7 @@
 				}
 
 				function authroizeCore(auth) {
-					if (!auth) {
+					if (!auth || (!auth.authed && !auth.policies)) {
 						return true;
 					}
 
@@ -87,7 +87,9 @@
 
 					// auth: true
 					if (auth === true) {
-						return true;
+						return {
+							authed: true
+						};
 					}
 
 					// auth: ['policy1', 'policy2']
