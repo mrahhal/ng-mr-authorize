@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "author": "Mohammad Rahhal <m.r992@hotmail.com>",
   "license": "MIT",
+	"private": true,
 	"scripts": {
     "test": "./node_modules/.bin/karma start --browsers Firefox --single-run"
   },
