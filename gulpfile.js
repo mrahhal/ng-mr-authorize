@@ -5,7 +5,7 @@ gulp.task('build', function () {
 });
 
 gulp.task('test', function() {
-    var server = new Server({configFile: __dirname + '/karma.conf.js', singleRun: true});
+    var server = new Server({configFile: __dirname + '/karma.conf.js', singleRun: false});
     server.start();
 });
 
