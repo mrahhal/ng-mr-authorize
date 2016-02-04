@@ -16,7 +16,7 @@
 		".bowerrc",
 		"gulpfile.js",
     "karma.conf.js",
-		"test",
+		"test"
   ],
   "dependencies": {
     "angular-ui-router": "^0.2.17"
