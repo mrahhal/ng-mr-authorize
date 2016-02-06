@@ -116,8 +116,12 @@
 					}
 				}
 
+				function validFunction (v) {
+					return angular.isFunction(v) || angular.isArray(v);
+				}
+
 				function validateUsage() {
-					if (!angular.isFunction(self.authed) || !angular.isFunction(self.policies)) {
+					if (!validFunction(self.authed) || !validFunction(self.policies)) {
 						throw new Error('Make sure you set authorizeProvider.authed and authorizeProvider.policies.');
 					}
 				}
