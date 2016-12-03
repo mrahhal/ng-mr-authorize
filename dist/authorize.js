@@ -15,6 +15,8 @@
 			};
 
 			this.$get = function ($injector, $state) {
+				'ngInject';
+
 				function check(policy) {
 					var cp = self._policies($injector);
 					if (cp) {
@@ -129,10 +131,11 @@
 				return function (state) {
 					validateUsage();
 
+					var originalState = state;
 					if (angular.isString(state)) {
 						state = $state.get(state);
 					}
-					if (!state) throw new Error('state undefined.');
+					if (!state) throw new Error('State "' + originalState + '" could not be resolved.');
 
 					var states;
 					// Optimize for states without parents.
