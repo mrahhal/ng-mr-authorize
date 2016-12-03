@@ -50,6 +50,12 @@ describe('authorize', function () {
 		policies = [];
 	});
 
+	it('should throw if state is invalid', function () {
+		should.throws(function () {
+			authorize('invalidstate');
+		}, null, 'State "invalidstate" could not be resolved.');
+	});
+
 	it('should pass with no protection', function () {
 		authorize('home').should.be.true();
 	});

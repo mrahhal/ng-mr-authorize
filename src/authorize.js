@@ -131,10 +131,11 @@
 				return function (state) {
 					validateUsage();
 
+					var originalState = state;
 					if (angular.isString(state)) {
 						state = $state.get(state);
 					}
-					if (!state) throw new Error('State could not be resolved.');
+					if (!state) throw new Error('State "' + originalState + '" could not be resolved.');
 
 					var states;
 					// Optimize for states without parents.
