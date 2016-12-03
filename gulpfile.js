@@ -6,6 +6,14 @@ var ngAnnotate = require('gulp-ng-annotate');
 var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
 var babel = require('gulp-babel');
+var bump = require('gulp-bump');
+var argv = require('yargs').argv;
+
+gulp.task('bump', function(){
+	gulp.src('./package.json')
+	.pipe(bump({ type: argv.type }))
+	.pipe(gulp.dest('./'));
+});
 
 gulp.task('lint', function () {
 	return gulp.src('src/*.js')
