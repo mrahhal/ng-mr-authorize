@@ -1,9 +1,10 @@
 # ng-mr-authorize
+
+Authorization service for ui-router in angular.
+
 [![Travis](https://img.shields.io/travis/mrahhal/ng-mr-authorize/master.svg)](https://travis-ci.org/mrahhal/ng-mr-authorize)
 [![Bower](https://img.shields.io/bower/v/ng-mr-authorize.svg)]()
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-
-Authorization service for ui-router in angular.
 
 ## Overview
 `mr.authorize` authorizes a state by looking inside of it for an `auth` property and tries to authorize the user based on that.
