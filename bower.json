@@ -3,7 +3,7 @@
   "author": "Mohammad Rahhal <m.r992@hotmail.com>",
   "description": "Authorization service for ui-router in angular.",
   "main": [
-    "authorize.js"
+    "src/authorize.js"
   ],
   "keywords": ["angular", "ui-router", "authorize", "authorization"],
   "license": "MIT",

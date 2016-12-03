@@ -1,0 +1,40 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "globals": {
+    "$": true,
+    "moment": true,
+    "_": true,
+    "hljs": true,
+    "Rickshaw": true,
+    "angular": true,
+    "angularDragula": true
+  },
+  "extends": "eslint:recommended",
+  "rules": {
+    "indent": [
+      "off",
+      "tab",
+      {
+        "SwitchCase": 1
+      }
+    ],
+    "linebreak-style": [
+      "error",
+      "windows"
+    ],
+    "quotes": [
+      "warn",
+      "single"
+    ],
+    "semi": [
+      "error",
+      "always"
+    ],
+    "no-unused-vars": [
+      "off"
+    ]
+  }
+}

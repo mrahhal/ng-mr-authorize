@@ -15,6 +15,8 @@
 			};
 
 			this.$get = function ($injector, $state) {
+				'ngInject';
+
 				function check(policy) {
 					var cp = self._policies($injector);
 					if (cp) {
@@ -67,7 +69,7 @@
 					var ancestors = [],
 						pivot = state;
 
-					while (true) {
+					while (true) { // eslint-disable-line
 						ancestors.push(pivot);
 						var parent = findParent(pivot);
 						if (!parent) {
@@ -132,7 +134,7 @@
 					if (angular.isString(state)) {
 						state = $state.get(state);
 					}
-					if (!state) throw new Error('state undefined.');
+					if (!state) throw new Error('State could not be resolved.');
 
 					var states;
 					// Optimize for states without parents.

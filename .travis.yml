@@ -9,5 +9,12 @@ before_script:
 - npm install
 - bower install
 script: gulp
+deploy:
+  provider: npm
+  email: m.r992@hotmail.com
+  api_key:
+    secure: tdiqGyoOqn9c9tzhTzNXipLhlOeRe59EU8Vz+ypI4V1aDgwvbf5quBCwO2d5Lx7pVCRUtXxsFpz2BC7RBpeUN96wYZNuJkiSdyMBkj2ppDw/3tD1G4a7KspStCzI25Nwf7P3xhDbLAf+EZg6yK5RABmaSdpL27/31R8akphCygRBq+uTO2NMEowTIyXHLEvaG+0jg6QG5/CxaaGXUk+lqAAvZ4Dwq5fgek2FrdCnwJ/zwc0kCBmhBtdgXz0QIVggHvZYy9KW2xiijea0krmpQhfHuWNoNNo5gB/ugD2AfY06587cZzfxApchgx+YTPS/OfmTqRhc5Dzz3fCoiAiv+hSvCT8TxjipIf011DEj20/a6NUppqEzgCmFz8HfAiqFIRNTQVVhhzo/AmdbV/gx51BEuoJwXfi8vohHbkVQTkoL0pobnmcH5qagf0niRsSzAVal9wv109YS1nidF5YlQVa6cEE5ZRbeJaVAEICOhpuPw86Q4Llr3rAWr2dlL0mrOYS77WUEwT1vurH1rgt43TTlTiQalFJXQR7GB4w4JfsjzmYT8b2kj61Vou8ynPwDj8NduL109FMf3kkzF8qAYgaz2Fu3SjIK9P3fgvZ7u+Y9W6L/wtWSXaM4IY8F//tQ9sFFItNQnw4T2ugQso/FrIMiktLiS/+BIIWZM1lGOu8=
+  on:
+    tags: true
 notifications:
   email: false
